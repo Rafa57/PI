@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Verdade do PI</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            border: 2px solid black;
+            width: 60vw;
+            border-collapse: collapse;
+        }
+
+        thead{
+            border: 2px solid black;
+            font-weight: bolder;
+            background-color: lightgray;
+        }
+
+        td, tr{
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th{
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela Verdade do PI</h1>
+
+    <P>A tabela verdade mostrará todas as combinações possíveis dos valores das variáveis booleanas e se a combinação atende a todos os requisitos (representado pela coluna final "Solução Completa").</p>
+        
+    <ul>
+        <li><strong>P</strong>: Cadastro de Produtos</li>
+        <li><strong>E</strong>: Atualização de Estoque</li>
+        <li><strong>L</strong>: Rastreamento de Localização</li>
+        <li><strong>R</strong>: Relatórios</li>
+    </ul>
+
+    <p>A coluna "Solução Completa" será verdadeira <strong>(T)</strong> apenas quando todas as variáveis (P, E, L, R) forem <strong>verdadeiras</strong>, ou seja, todos os requisitos forem atendidos.</p>
+
+    <div class="and"></div>         
+        <table>
+            <h2>Tabela</h2>
+            <thead class="linha">
+                <th>P</th>
+                <th>E</th>
+                <th>L</th>
+                <th>R</th>
+                <th>P /\ E</th>
+                <th>E /\ L</th>
+                <th>L /\ R</th>
+                <th>P /\ E /\ L /\ R</th>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>V</td> <!--P-->
+                    <td>V</td> <!--E-->
+                    <td>V</td> <!--L-->
+                    <td>V</td> <!--R-->
+                    <td>V</td> <!--P /\ E-->
+                    <td>V</td> <!--E /\ L-->
+                    <td>V</td> <!--L /\ R-->
+                    <td>V</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>F</td> <!--P-->
+                    <td>V</td> <!--E-->
+                    <td>V</td> <!--L-->
+                    <td>V</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>V</td> <!--E /\ L-->
+                    <td>V</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>F</td> <!--P-->
+                    <td>F</td> <!--E-->
+                    <td>V</td> <!--L-->
+                    <td>V</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>F</td> <!--E /\ L-->
+                    <td>V</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>F</td> <!--P-->
+                    <td>F</td> <!--E-->
+                    <td>F</td> <!--L-->
+                    <td>V</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>F</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>V</td> <!--P-->
+                    <td>V</td> <!--E-->
+                    <td>V</td> <!--L-->
+                    <td>F</td> <!--R-->
+                    <td>V</td> <!--P /\ E-->
+                    <td>V</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>V</td> <!--P-->
+                    <td>V</td> <!--E-->
+                    <td>F</td> <!--L-->
+                    <td>F</td> <!--R-->
+                    <td>V</td> <!--P /\ E-->
+                    <td>F</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>V</td> <!--P-->
+                    <td>F</td> <!--E-->
+                    <td>F</td> <!--L-->
+                    <td>F</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>F</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>V</td> <!--P-->
+                    <td>F</td> <!--E-->
+                    <td>V</td> <!--L-->
+                    <td>F</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>F</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>F</td> <!--P-->
+                    <td>V</td> <!--E-->
+                    <td>V</td> <!--L-->
+                    <td>F</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>V</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+                <tr>
+                    <td>F</td> <!--P-->
+                    <td>F</td> <!--E-->
+                    <td>F</td> <!--L-->
+                    <td>F</td> <!--R-->
+                    <td>F</td> <!--P /\ E-->
+                    <td>F</td> <!--E /\ L-->
+                    <td>F</td> <!--L /\ R-->
+                    <td>F</td> <!--P /\ E /\ L /\ R-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
